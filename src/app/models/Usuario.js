@@ -1,4 +1,4 @@
-const mongoose = require('../../database/index');
+const mongoose = require('../../database');
 
 const UsuarioSchema = new mongoose.Schema({
   nome: {
@@ -12,7 +12,12 @@ const UsuarioSchema = new mongoose.Schema({
   },
   email: {
     type: String,
-    unique: true
+    unique: true,
+    lowercase: true
+  },
+  senha:{
+    type: String,
+    require: true
   },
   admin: {
     type: Boolean,
