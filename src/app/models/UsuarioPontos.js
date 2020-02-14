@@ -5,11 +5,31 @@ const UsuarioPontosSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: 'Usuario'
   },
+  controle_pontos: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'ControlePontos'
+  },
   pontos: {
     type: Number,
     require: true
   },
-  partidasJogadas: {
+  partidas_jogadas: {
+    type: Number,
+    require: true
+  },
+  primeiro: {
+    type: Number,
+    require: true
+  },
+  segundo: {
+    type: Number,
+    require: true
+  },
+  terceiro: {
+    type: Number,
+    require: true
+  },
+  ultimo: {
     type: Number,
     require: true
   }

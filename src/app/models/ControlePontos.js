@@ -1,11 +1,13 @@
 const mongoose = require('../../database/index');
 
 const ControlePontosSchema = new mongoose.Schema({
-  usuarios: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'Usuario'
-  }
+  usuarios_pontos: [
+    {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'UsuarioPontos'
+    }
+  ]
 });
 
-const ControlePontos = mongoose.model('ControlePontos', ControlePontos);
+const ControlePontos = mongoose.model('ControlePontos', ControlePontosSchema);
 module.exports = ControlePontos;

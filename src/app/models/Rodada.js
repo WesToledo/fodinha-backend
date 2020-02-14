@@ -18,3 +18,6 @@ const RodadaSchema = new mongoose.Schema({
     }
   ]
 });
+
+const Rodada = mongoose.model('Rodada', RodadaSchema);
+module.exports = Rodada;

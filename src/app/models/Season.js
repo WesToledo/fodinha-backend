@@ -8,8 +8,16 @@ const SeasonSchema = new mongoose.Schema({
   semestre: {
     type: String,
     require: true
+  },
+  controle_pontos: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'ControlePontos'
+  },
+  partidas: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Partidas'
   }
 });
 
-const Season = mongoose.model('Season', Season);
+const Season = mongoose.model('Season', SeasonSchema);
 module.exports = Season;
